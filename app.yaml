@@ -1,5 +1,5 @@
 kind: wasmer.io/App.v0
-name: my-laravel-app-name  # اختر اسماً فريداً لتطبيقك
+name: laravel  # اختر اسماً فريداً لتطبيقك
 package: .                 # يشير إلى المجلد الحالي الذي يحتوي على wasmer.toml
 
 # إعداد قاعدة البيانات
