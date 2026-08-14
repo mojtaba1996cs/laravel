@@ -16,4 +16,13 @@ locality:
 env:
   DB_CONNECTION: mysql
   DB_DATABASE: ${DB_NAME}  # Wasmer يمررها باسم DB_NAME ولارافيل يتوقعها DB_DATABASE
-
+jobs:
+  - name: run-migrations
+    trigger: post-deployment
+    action:
+      execute:
+        command: run  # يجب أن يطابق اسم الـ command في ملف wasmer.toml
+        cli_args:
+          - "artisan"
+          - "migrate"
+          - "--force"
